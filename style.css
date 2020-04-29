@@ -9,12 +9,12 @@ body {
 }
 @font-face { 
 		font-family: FloydianCyr;			
-			src: url('fonts/FloydianCyr.ttf'); 
-			src: url('fonts/FloydianCyr.eot?#iefix') format('embedded-opentype'),
-			url('fonts/FloydianCyr.woff2') format('woff2'),                  
-			url('fonts/FloydianCyr.woff') format('woff'),                   
-			url('fonts/FloydianCyr.ttf')  format('truetype'),                
-			url('fonts/FloydianCyr.svg#svgFloydianCyr') format('svg');
+			src: url('FloydianCyr.ttf'); 
+			src: url('FloydianCyr.eot?#iefix') format('embedded-opentype'),
+			url('FloydianCyr.woff2') format('woff2'),                  
+			url('FloydianCyr.woff') format('woff'),                   
+			url('FloydianCyr.ttf')  format('truetype'),                
+			url('FloydianCyr.svg#svgFloydianCyr') format('svg');
 		font-weight: normal; 
 		font-style: normal; 
 }
