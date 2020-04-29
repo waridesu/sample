@@ -9,7 +9,7 @@ body {
 }
 @font-face { 
 		font-family: FloydianCyr;			
-			src: url('FloydianCyr.ttf'); 
+			src: url('FloydianCyr.woff2'); 
 			src: url('FloydianCyr.eot?#iefix') format('embedded-opentype'),
 			url('FloydianCyr.woff2') format('woff2'),                  
 			url('FloydianCyr.woff') format('woff'),                   
