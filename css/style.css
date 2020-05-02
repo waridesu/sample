@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400&subset=cyrillic');
+
+@font-face {
+	font-family: 'FloydianCyr';
+	src: url('../FloydianCyr.woff2');
+  }
+
+body {
+   background: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+}
+
+
+h1{
+    font-family: 'FloydianCyr';
+	font-weight: 400;
+	font-size: 90px;
+	text-align: center;
+	margin: 0;
+}
+h2{
+    font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	font-size: 30px;
+}
+
+h3 {
+	text-align: center;
+}
+.burger {
+	display: none;
+}
+
+.navigation {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background-color: #fff;
+	color: #000;
+}
+.navigation li{
+	flex-grow: 1;
+}
+.navigation a {
+	display: block;
+	text-align: center;
+	padding: 20px 0;
+	text-decoration: none;
+	color: #000;
+	font-weight: 550;
+	font-size: 20px;
+}
+
+.navigation a:hover{
+	transform: scaleY(1.5) skewY(-4deg);
+}
+
+
+.navigation .teatre-name {
+	position: relative;
+	font-family: "FloydianCyr";
+	font-size: 36px;
+	letter-spacing: -2px;
+	line-height: 19px;
+}
+
+.navigation .teatre-name::first-letter{
+	letter-spacing: -23px;
+	font-size: 50px;
+}
+.teatre-status{
+	position: absolute;
+	top: 11px;
+	left: 0;
+	transform: translateX(8vw);
+	font-family: "Osvald", sans-serif;
+	font-size: 15px;
+	letter-spacing: normal;
+}
+
+
+	.board img{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.board {
+		overflow: hidden;
+		background-color: black;
+		width: 400px;		
+		margin: 0 auto;
+		margin-right: 40px;	
+		float: left;
+		border: solid white;
+		border-radius: 16px;
+		transition: all 0.5s linear;
+	}
+
+	.board:hover{
+		filter:invert(1);
+	}
+@media (max-width: 691px){
+
+	.burger {
+		display: block;
+		position: fixed;
+		width: 40px;
+		height: 40px;
+		right: 15px;
+		top: 12px;
+		z-index: 2;
+		box-shadow: 0 0 0 2px #fff;
+		border-radius: 5px;
+	}
+	.burger:before,
+	.burger:after,
+	.burger span {
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		width: 85%;
+		height: 2px;
+		left: 50%;
+  		transform: translateX(-50%);
+		transition: all 0.5s ease;
+	}
+	
+	.burger:before {
+		top: 7px;
+	}
+
+	.burger:after {
+		bottom: 7px;
+	}
+
+	.burger span{
+		top: 19px
+	}
+
+	.burger.active {
+		box-shadow: 0 0 0 2px #000;
+	}
+
+	.burger.active:before ,
+	.burger.active:after ,
+	.burger.active span {
+		background-color: black;
+		transform: scale(0);
+	}
+	.burger.active:before{
+		transform: translate(-17px, 12px) rotate(-45deg) ;
+	}
+	.burger.active:after{
+		transform: translate(-17px, -12px) rotate(45deg) ;
+	}
+	
+
+	.navigation {
+		flex-direction: column;
+		position: fixed;
+		top: -1000px;
+		text-align: start;
+		width: 100%;
+		height: 100%;
+		transition: 0.5s ease;	
+	}
+
+	.navigation.active {
+		padding-left: 3vw;
+		transform: translateY(1000px);
+	}
+
+	.navigation a:hover{
+		transform: scaleY(1.1) skewY(-2deg);
+	}
+
+	.navigation li {
+		flex-shrink: 8;
+	}
+
+	.navigation a {
+		padding:  0;
+		font-size: 7.5vh;
+		text-align: start;
+
+	}
+	
+
+	.navigation .teatre-name {
+		line-height: 10vh;
+	}
+	.teatre-name::first-letter {
+		font-size: 8.5vh;
+		letter-spacing: -3.5vh;
+	}
+	.teatre-status {
+		display: none;
+	}
+
+	.board {
+		max-width: 98%;
+		margin: 0 auto;
+	}
+}
+
+
+.menu__btn:hover{	
+	filter:invert(1);
+	cursor:pointer;
+}
+.poster-section{
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.poster {
+	display: flex;
+	flex-grow: 1;
+	width: 32%;
+	min-width: 400px;
+	padding: 5px;
+}
+.poster-container {
+	display: flex;
+	flex-direction: column;
+	padding: 2% 0;
+	margin-bottom: 5px;
+	border: 5px solid #fff;
+	border-radius: 15px;
+}
+
+.poster p {
+	font-size: 20px;
+	text-align: justify;
+	margin: 0 2.5%;
+	text-indent: 5%;
+}
+.poster-image {
+	width: 95%;
+	margin: 0 auto;
+}
