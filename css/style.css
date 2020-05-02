@@ -104,6 +104,39 @@ h3 {
 	.board:hover{
 		filter:invert(1);
 	}
+
+	.poster-section{
+		display: flex;
+		flex-wrap: wrap;
+	
+	}
+	.poster {
+		display: flex;
+		flex-grow: 1;
+		width: 32%;
+		min-width: 400px;
+		padding: 5px;
+	}
+	.poster-container {
+		display: flex;
+		flex-direction: column;
+		padding: 2% 0;
+		margin-bottom: 5px;
+		border: 5px solid #fff;
+		border-radius: 15px;
+	}
+	
+	.poster p {
+		font-size: 20px;
+		text-align: justify;
+		margin: 0 2.5%;
+		text-indent: 5%;
+	}
+	.poster-image {
+		width: 95%;
+		margin: 0 auto;
+	}
+
 @media (max-width: 691px){
 
 	.burger {
@@ -206,41 +239,14 @@ h3 {
 		max-width: 98%;
 		margin: 0 auto;
 	}
+
+	.poster {
+		min-width: 95%;
+	}
 }
 
 
 .menu__btn:hover{	
 	filter:invert(1);
 	cursor:pointer;
-}
-.poster-section{
-	display: flex;
-	flex-wrap: wrap;
-
-}
-.poster {
-	display: flex;
-	flex-grow: 1;
-	width: 32%;
-	min-width: 400px;
-	padding: 5px;
-}
-.poster-container {
-	display: flex;
-	flex-direction: column;
-	padding: 2% 0;
-	margin-bottom: 5px;
-	border: 5px solid #fff;
-	border-radius: 15px;
-}
-
-.poster p {
-	font-size: 20px;
-	text-align: justify;
-	margin: 0 2.5%;
-	text-indent: 5%;
-}
-.poster-image {
-	width: 95%;
-	margin: 0 auto;
 }
