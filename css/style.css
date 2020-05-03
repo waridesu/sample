@@ -294,12 +294,12 @@ h3 {
     }
     .navigation a {
         padding: 0;
-        font-size: 12vh;
+        font-size: 10vh;
         text-align: start;
     }
     .navigation .teatre-name {
         line-height: 12vh;
-        font-size: 9.5vh;
+        font-size: 8vh;
     }
     .navigation .teatre-name::first-letter {
         font-size: 13vh;
