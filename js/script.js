@@ -1,6 +1,6 @@
 var x = document.querySelector(".burger")
-var m = document.querySelector(".navigation")
+var burger = document.querySelector(".navigation")
 x.addEventListener("click", function() {
     x.classList.toggle('active');
-    m.classList.toggle('active');
+    burger.classList.toggle('active');
 });

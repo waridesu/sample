@@ -132,6 +132,99 @@ h3 {
     margin: 0 auto;
 }
 
+.slider {
+    display: none;
+}
+
+.slider.active-modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #000;
+}
+
+.slider-slides {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.slider-slides img {
+    width: 32%;
+    margin: 10px;
+    box-shadow: 0 0 2px 2px #fff;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.close-modal {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 15px;
+    top: 12px;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.close-modal::before,
+.close-modal::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    width: 85%;
+    height: 2px;
+    background-color: #000;
+}
+
+.close-modal::before {
+    top: 19px;
+    transform: rotate(-45deg);
+}
+
+.close-modal::after {
+    bottom: 19px;
+    transform: rotate(45deg);
+}
+
+.poster-gallery {
+    padding: 4px;
+    margin: 10px auto 0;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: 550;
+    background: linear-gradient(to bottom, #141e30, #243b55);
+}
+
+.poster-gallery a {
+    text-decoration: none;
+    color: #fff;
+    border-radius: 16px;
+    padding: 2px 4px;
+    background: linear-gradient(to bottom, #bbd2c5, #536976);
+}
+
+@media (max-width: 1500px) {
+    .slider-slides img {
+        width: 31%;
+    }
+}
+
+@media (max-width: 856px) {
+    .slider-slides img {
+        width: 47%;
+    }
+}
+
 @media (max-width: 691px) {
     .burger {
         display: block;
@@ -168,9 +261,7 @@ h3 {
     .burger.active {
         box-shadow: 0 0 0 2px #000;
     }
-    .burger.active:before,
-    .burger.active:after,
-    .burger.active span {
+    .burger.active:before, .burger.active:after, .burger.active span {
         background-color: black;
         transform: scale(0);
     }
@@ -183,7 +274,7 @@ h3 {
     .navigation {
         flex-direction: column;
         position: fixed;
-        top: -1000px;
+        top: -100%;
         text-align: start;
         width: 100%;
         height: 100%;
@@ -191,7 +282,7 @@ h3 {
     }
     .navigation.active {
         padding-left: 3vw;
-        transform: translateY(1000px);
+        transform: translateY(100%);
     }
     .navigation a:hover {
         transform: scaleY(1.1) skewY(-2deg);
@@ -219,17 +310,15 @@ h3 {
         width: 97%;
         margin-left: 0.8%;
     }
-
     .board img {
         width: 100%;
     }
     .poster {
         min-width: 95%;
     }
-
-}
-
-.menu__btn:hover {
-    filter: invert(1);
-    cursor: pointer;
+    .slider-slides img {
+        margin: 5px;
+        width: 97%;
+        height: 310px;
+    }
 }
